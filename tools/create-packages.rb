@@ -335,6 +335,7 @@ package_file_map.each do |package,files|
 
 	quoted_files = []
 	files.each do |file|
+	  puts "FILE = #{file}"
 		# do not package the updater binary into a zip file -
 		# it must be downloaded uncompressed
 		if package_config.is_updater(file)
@@ -370,9 +371,11 @@ package_file_map.each do |package,files|
 
 	File.unlink(output_file) if File.exist?(output_file)
 
+	print input_dir, " Hello\n";
 	Dir.chdir(input_dir) do
 		if (!system("zip #{zip_flags} #{output_file} #{quoted_file_list}"))
-			raise "Failed to generate package #{package}"
+			!puts "zip #{zip_flags} -b #{input_dir} #{output_file} #{quoted_file_list}"
+			raise "Failed to generate packagex #{package} #{output_file}"
 		else
 			puts "Generated package #{package} : #{file_sha1(output_file)}"
 		end

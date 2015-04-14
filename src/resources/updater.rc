@@ -18,10 +18,10 @@ BEGIN
                         VALUE "OriginalFilename", "updater.exe"
                         VALUE "InternalName", "updater.exe"
                         VALUE "FileDescription", "Software Update Tool"
-                        VALUE "CompanyName", "Mendeley Ltd."
-                        VALUE "LegalCopyright", "(C) Mendeley Ltd. 2011"
-                        VALUE "ProductName", "Mendeley Software Updater"
-                        VALUE "PrivateBuild", "Built by Robert Knight"
+                        VALUE "CompanyName", "Tau Labs"
+                        VALUE "LegalCopyright", "Tau Labs 2015"
+                        VALUE "ProductName", "Tau Labs Software Updater"
+                        VALUE "PrivateBuild", "Built by the Tau Labs Team"
                 END
         END
         BLOCK "VarFileInfo"
